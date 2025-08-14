@@ -16,7 +16,7 @@ Ele utiliza **Java**, **Selenium WebDriver**, **Cucumber** (BDD) e captura evid�
 - Documentação de evidências em DOCX
 
 ---
-Funcionalidades Automatizadas
+## Funcionalidades Automatizadas
 
 Acessar o site Petz
 
