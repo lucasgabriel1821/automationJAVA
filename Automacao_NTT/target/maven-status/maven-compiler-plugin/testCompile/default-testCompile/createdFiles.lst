@@ -1,0 +1,4 @@
+pages\PesquisaPage.class
+tests\petzAutomacao.class
+steps\StepPesquisaProduto.class
+steps\PetzSteps.class
