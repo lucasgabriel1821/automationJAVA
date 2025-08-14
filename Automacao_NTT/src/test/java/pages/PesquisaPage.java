@@ -21,13 +21,11 @@ public class PesquisaPage {
         this.evidencia = new EvidenciaDocxPage(driver);
     }
 
-    // Abre a URL
     public void abrirUrl(String url) {
         driver.get(url);
         evidencia.reportaTestePassou("abrirUrl");
     }
 
-    // Pesquisa um produto
     public void pesquisarProduto(String produto) {
         try {
             driver.findElement(campoPesquisa).clear();
@@ -39,7 +37,6 @@ public class PesquisaPage {
         }
     }
 
-    // Clica em um produto pelo nome
     public void clicarProdutoPorNome(String nomeProduto) {
         try {
             String xpathProduto = String.format("//a[contains(@data-nomeproduto,'%s')]", nomeProduto);
@@ -51,7 +48,6 @@ public class PesquisaPage {
         }
     }
 
-    // Adiciona o produto ao carrinho
     public void adicionarProdutoAoCarrinho() {
         try {
             By botaoAdicionar = By.id("addToBag");
@@ -65,7 +61,6 @@ public class PesquisaPage {
         }
     }
 
-    // Valida o preço do produto na página de detalhes
     public void validarPrecoProduto(String precoEsperado) {
         try {
             String precoFormatado = precoEsperado.startsWith("R$") ? precoEsperado : "R$ " + precoEsperado;
@@ -88,13 +83,11 @@ public class PesquisaPage {
         }
     }
 
-    // Valida o preço no carrinho
     public void validarPrecoNoCarrinho(String precoEsperado) {
         try {
             String precoFormatado = precoEsperado.startsWith("R$") ? precoEsperado : "R$ " + precoEsperado;
             precoFormatado = precoFormatado.trim();
 
-            // Procura qualquer elemento que contenha o preço formatado
             By precoLocator = By.xpath("//*[contains(normalize-space(), '" + precoFormatado + "')]");
 
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -118,7 +111,6 @@ public class PesquisaPage {
         }
     }
 
-    // Finaliza o documento de evidências
     public void finalizarEvidencias() {
         evidencia.finalizarDocumento();
     }

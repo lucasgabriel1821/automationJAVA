@@ -55,7 +55,7 @@ public class EvidenciaDocxPage {
 
     public void addEvidenceToDocx(String stepName, String status, String description) {
         try {
-            // Captura o screenshot
+
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 
             // Adiciona título do passo
