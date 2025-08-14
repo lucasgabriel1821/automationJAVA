@@ -13,7 +13,7 @@ import java.util.Date;
 
 public class EvidenciaDocxPage {
     private final WebDriver driver;
-    private static final String BASE_PATH = "C:\\Users\\Lucas\\Documents\\Evidências\\";
+    private static final String BASE_PATH = "CAMINHO\\PARA\\O ARQUIVO";
     private String currentTestFolder;
     private XWPFDocument document;
     private FileOutputStream out;
